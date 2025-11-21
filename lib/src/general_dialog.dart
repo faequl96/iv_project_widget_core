@@ -76,14 +76,18 @@ class GeneralDialog {
     );
   }
 
-  static void showValidateStateError(String message) {
+  static void showValidateStateError(String message, {int durationInSeconds = 3}) {
     showError(
       GeneralResponseStateDialogContent.error(
         iconColor: Colors.orange,
         verticalAxisContents: [
-          Text(message, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+          Text(
+            message,
+            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
           const SizedBox(height: 10),
-          Countdown(durationInSeconds: 3, message: AppLocalization.translate('transaction.autoCloseIn')),
+          Countdown(durationInSeconds: durationInSeconds, message: AppLocalization.translate('transaction.autoCloseIn')),
         ],
       ),
     );

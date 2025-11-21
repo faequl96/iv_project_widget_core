@@ -18,7 +18,7 @@ class SharedPersonalize {
   static PreSufFixIcon suffixClear(void Function() onTap) {
     return PreSufFixIcon(
       onTap: () => onTap(),
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Colors.grey.shade400,
       splashColor: Colors.white,
       child: const Icon(Icons.close, size: 20, color: Colors.white),
     );
