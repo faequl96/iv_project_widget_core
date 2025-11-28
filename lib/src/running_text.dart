@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
 class RunningText extends StatefulWidget {
-  const RunningText({super.key, required this.constraints, required this.text});
+  const RunningText({
+    super.key,
+    required this.constraints,
+    required this.text,
+    this.textStyle = const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
+  });
 
   final BoxConstraints constraints;
   final String text;
+  final TextStyle textStyle;
 
   @override
   State<RunningText> createState() => _RunningTextState();
@@ -39,15 +45,12 @@ class _RunningTextState extends State<RunningText> with SingleTickerProviderStat
     super.initState();
 
     final painter = TextPainter(
-      text: TextSpan(
-        text: widget.text,
-        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
-      ),
+      text: TextSpan(text: widget.text, style: widget.textStyle),
       maxLines: 1,
       textDirection: TextDirection.ltr,
       textWidthBasis: TextWidthBasis.longestLine,
     )..layout();
-    _textWidth = painter.width + 20;
+    _textWidth = painter.width + (painter.width * .15);
 
     _initAnimation();
     _startAnimationLoop();
@@ -75,10 +78,7 @@ class _RunningTextState extends State<RunningText> with SingleTickerProviderStat
               right: slide,
               width: _textWidth,
               height: 24,
-              child: Text(
-                widget.text,
-                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
-              ),
+              child: Text(widget.text, style: widget.textStyle),
             ),
           ],
         );
