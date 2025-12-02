@@ -18,7 +18,7 @@ class RetryWidget extends StatelessWidget {
       children: [
         Text(
           errorMessage,
-          style: AppFonts.nunito(fontSize: 16, fontWeight: .bold, color: Colors.orange),
+          style: AppFonts.nunito(fontSize: 16, fontWeight: .w800, color: Colors.orange),
         ),
         const SizedBox(height: 10),
         GeneralEffectsButton(
@@ -36,7 +36,7 @@ class RetryWidget extends StatelessWidget {
               const SizedBox(width: 6),
               Text(
                 localeCubit.state.languageCode == 'id' ? 'Coba Lagi' : 'Try Again',
-                style: AppFonts.nunito(fontSize: 15, fontWeight: .bold, color: Colors.white),
+                style: AppFonts.nunito(fontSize: 15, fontWeight: .w700, color: Colors.white),
               ),
               const SizedBox(width: 4),
             ],

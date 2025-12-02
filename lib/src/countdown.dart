@@ -52,21 +52,21 @@ class _CountdownState extends State<Countdown> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text.rich(TextSpan(text: widget.message)),
+            Text(widget.message, style: AppFonts.nunito(fontWeight: .w400)),
             const SizedBox(width: 6),
             AnimatedSwitcher(
               duration: const Duration(milliseconds: 200),
               child: Text(
                 '$_countdown',
                 key: ValueKey<int>(_countdown),
-                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: AppColor.primaryColor),
+                style: AppFonts.nunito(fontSize: 16, fontWeight: .w800, color: AppColor.primaryColor),
               ),
             ),
             const SizedBox(width: 6),
             Text(
               AppLocalization.translate('common.seconds'),
               key: ValueKey<int>(_countdown),
-              style: const TextStyle(fontWeight: FontWeight.bold),
+              style: AppFonts.nunito(fontWeight: .w800),
             ),
           ],
         ),
