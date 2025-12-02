@@ -36,7 +36,7 @@ class SharedPersonalize {
           child: Text(
             '*',
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 22, height: 1, color: ColorConverter.lighten(Colors.red), fontWeight: FontWeight.bold),
+            style: AppFonts.nunito(fontSize: 22, height: 1, color: ColorConverter.lighten(Colors.red), fontWeight: .w800),
           ),
         ),
       ),
@@ -45,23 +45,23 @@ class SharedPersonalize {
 
   static TextFieldValidator fieldCanNotEmpty() {
     return TextFieldValidator.failed(
-      message: Text(AppLocalization.translate('auth.error.validation.cannotBeEmpty'), style: const TextStyle(color: Colors.red)),
+      message: Text(AppLocalization.translate('auth.error.validation.cannotBeEmpty'), style: AppFonts.nunito(color: Colors.red)),
     );
   }
 
   static TextFieldValidator fieldEmailNotValid() {
     return TextFieldValidator.failed(
-      message: Text(AppLocalization.translate('auth.error.validation.invalidEmail'), style: const TextStyle(color: Colors.red)),
+      message: Text(AppLocalization.translate('auth.error.validation.invalidEmail'), style: AppFonts.nunito(color: Colors.red)),
     );
   }
 
   static Text buttonText(String text, {double? fontSize, Color? color}) => Text(
     text,
     textAlign: TextAlign.center,
-    style: TextStyle(fontWeight: FontWeight.bold, color: color ?? Colors.white, fontSize: fontSize),
+    style: AppFonts.nunito(fontWeight: .w800, color: color ?? Colors.white, fontSize: fontSize),
   );
 
-  static TextStyle titleTextStyle({Color? color}) => TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: color);
+  static TextStyle titleTextStyle({Color? color}) => AppFonts.nunito(fontWeight: .w800, fontSize: 16, color: color);
 
   static Widget loadingWidget({double size = 28, Color? color}) => SizedBox(
     width: size,

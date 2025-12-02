@@ -56,7 +56,7 @@ class GeneralDialog {
     showSuccess(
       GeneralResponseStateDialogContent.success(
         verticalAxisContents: [
-          Text(message, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+          Text(message, style: AppFonts.nunito(fontSize: 15, fontWeight: FontWeight.w800)),
           const SizedBox(height: 10),
           Countdown(durationInSeconds: 5, message: AppLocalization.translate('transaction.autoCloseIn')),
         ],
