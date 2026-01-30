@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:iv_project_core/iv_project_core.dart';
 import 'package:iv_project_widget_core/iv_project_widget_core.dart';
+import 'package:iv_project_widget_core/src/on_process.dart';
 import 'package:quick_dev_sdk/quick_dev_sdk.dart';
 
 class GeneralDialog {
@@ -121,6 +122,25 @@ class GeneralDialog {
       ),
     ).then((value) {
       completer.complete(value);
+    });
+
+    return await completer.future;
+  }
+
+  static Future<void> showOnProcess({String? message}) async {
+    final completer = Completer<void>();
+
+    ShowModal.bottomSheet<void>(
+      GlobalContextService.value,
+      dismissible: false,
+      enableDrag: false,
+      decoration: BottomSheetDecoration(
+        color: ColorConverter.lighten(AppColor.primaryColor, 94),
+        borderRadius: const BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
+      ),
+      contentBuilder: (_) => OnProcess(message: message),
+    ).then((_) {
+      completer.complete();
     });
 
     return await completer.future;
