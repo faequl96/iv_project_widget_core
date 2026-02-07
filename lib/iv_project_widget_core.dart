@@ -11,3 +11,4 @@ export 'src/running_text.dart';
 export 'src/shared_personalize.dart';
 export 'src/skeleton_box.dart';
 export 'src/summaries/general_iv_core_summary.dart';
+export 'src/zoom_image.dart';
