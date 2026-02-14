@@ -103,7 +103,7 @@ class GeneralDialog {
         color: ColorConverter.lighten(AppColor.primaryColor, 94),
         borderRadius: const BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
       ),
-      header: const BottomSheetHeader(useHandleBar: true),
+      header: const BottomSheetHeader(title: HeaderTitle.handleBar()),
       contentBuilder: (_) => GeneralConfirmationDialogContent.delete(
         message: Text.rich(
           TextSpan(
