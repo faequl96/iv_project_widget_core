@@ -15,12 +15,12 @@ class SharedPersonalize {
 
   static final dialogDecoration = DialogDecoration(borderRadius: BorderRadius.circular(14));
 
-  static PreSufFixIcon suffixClear(void Function() onTap) {
+  static PreSufFixIcon suffixClear(void Function() onTap, {Color? color, Color? iconColor}) {
     return PreSufFixIcon(
       onTap: () => onTap(),
-      backgroundColor: Colors.grey.shade400,
+      backgroundColor: color ?? Colors.grey.shade400,
       splashColor: Colors.white,
-      child: const Icon(Icons.close, size: 20, color: Colors.white),
+      child: Icon(Icons.close, size: 20, color: iconColor ?? Colors.white),
     );
   }
 
@@ -43,9 +43,12 @@ class SharedPersonalize {
     ),
   );
 
-  static TextFieldValidator fieldCanNotEmpty() {
+  static TextFieldValidator fieldCanNotEmpty({String? message}) {
     return TextFieldValidator.failed(
-      message: Text(AppLocalization.translate('auth.error.validation.cannotBeEmpty'), style: AppFonts.nunito(color: Colors.red)),
+      message: Text(
+        message ?? AppLocalization.translate('auth.error.validation.cannotBeEmpty'),
+        style: AppFonts.nunito(color: Colors.red),
+      ),
     );
   }
 
