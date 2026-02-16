@@ -19,26 +19,28 @@ class GeneralConfirmationDialogButton extends StatelessWidget {
         onTap: onTap,
         isDisabled: isBusy,
         width: double.maxFinite,
-        padding: const EdgeInsets.symmetric(vertical: 12),
+        padding: const .symmetric(vertical: 12),
         color: isCancel
             ? Colors.white
             : isEdit
             ? ColorConverter.lighten(Colors.blue)
             : ColorConverter.lighten(Colors.red),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: .circular(10),
         border: isCancel
-            ? Border.all(width: 2, color: isEdit ? ColorConverter.lighten(Colors.blue) : ColorConverter.lighten(Colors.red))
+            ? .all(width: 2, color: isEdit ? ColorConverter.lighten(Colors.blue) : ColorConverter.lighten(Colors.red))
             : null,
         useInitialElevation: true,
         hoveredElevation: 3,
         child: SharedPersonalize.buttonText(
           isCancel ? AppLocalization.translate('common.cancel') : AppLocalization.translate('common.confirm'),
           fontSize: 15,
-          color: isCancel
-              ? isEdit
-                    ? ColorConverter.lighten(Colors.blue)
-                    : ColorConverter.lighten(Colors.red)
-              : null,
+          textStyle: TextStyle(
+            color: isCancel
+                ? isEdit
+                      ? ColorConverter.lighten(Colors.blue)
+                      : ColorConverter.lighten(Colors.red)
+                : null,
+          ),
         ),
       ),
     );
