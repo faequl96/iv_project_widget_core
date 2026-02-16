@@ -20,7 +20,7 @@ dependencies:
   quick_dev_sdk:
     git:
       url: https://github.com/faequl96/quick_dev_sdk.git
-      ref: 0.1.0
+      ref: 0.1.0+1
 
   bloc: ^9.2.0
   flutter_bloc: ^9.1.1
