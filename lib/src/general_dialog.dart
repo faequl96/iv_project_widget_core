@@ -53,11 +53,11 @@ class GeneralDialog {
     return await completer.future;
   }
 
-  static void showResponseStateSuccess(String message) {
+  static void showResponseStateSuccess(String message, {TextStyle? textStyle}) {
     showSuccess(
       GeneralResponseStateDialogContent.success(
         verticalAxisContents: [
-          Text(message, style: AppFonts.nunito(fontSize: 15, fontWeight: FontWeight.w800)),
+          Text(message, style: textStyle ?? const TextStyle(fontSize: 15, fontWeight: FontWeight.w800)),
           const SizedBox(height: 10),
           Countdown(durationInSeconds: 5, message: AppLocalization.translate('transaction.autoCloseIn')),
         ],

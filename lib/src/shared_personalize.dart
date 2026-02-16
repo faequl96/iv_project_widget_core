@@ -24,7 +24,7 @@ class SharedPersonalize {
     );
   }
 
-  static final suffixMandatory = PreSufFixIcon(
+  static PreSufFixIcon suffixMandatory({TextStyle? textStyle}) => PreSufFixIcon(
     onTap: () {},
     child: SizedBox(
       width: 24,
@@ -36,35 +36,38 @@ class SharedPersonalize {
           child: Text(
             '*',
             textAlign: TextAlign.center,
-            style: AppFonts.nunito(fontSize: 22, height: 1, color: ColorConverter.lighten(Colors.red), fontWeight: .w800),
+            style: textStyle ?? TextStyle(fontSize: 22, height: 1, color: ColorConverter.lighten(Colors.red), fontWeight: .w800),
           ),
         ),
       ),
     ),
   );
 
-  static TextFieldValidator fieldCanNotEmpty({String? message}) {
+  static TextFieldValidator fieldCanNotEmpty({String? message, TextStyle? textStyle}) {
     return TextFieldValidator.failed(
       message: Text(
         message ?? AppLocalization.translate('auth.error.validation.cannotBeEmpty'),
-        style: AppFonts.nunito(color: Colors.red),
+        style: textStyle ?? const TextStyle(color: Colors.red),
       ),
     );
   }
 
-  static TextFieldValidator fieldEmailNotValid() {
+  static TextFieldValidator fieldEmailNotValid({TextStyle? textStyle}) {
     return TextFieldValidator.failed(
-      message: Text(AppLocalization.translate('auth.error.validation.invalidEmail'), style: AppFonts.nunito(color: Colors.red)),
+      message: Text(
+        AppLocalization.translate('auth.error.validation.invalidEmail'),
+        style: textStyle ?? const TextStyle(color: Colors.red),
+      ),
     );
   }
 
-  static Text buttonText(String text, {double? fontSize, Color? color}) => Text(
+  static Text buttonText(String text, {double? fontSize, TextStyle? textStyle}) => Text(
     text,
     textAlign: TextAlign.center,
-    style: AppFonts.nunito(fontWeight: .w800, color: color ?? Colors.white, fontSize: fontSize),
+    style: textStyle ?? TextStyle(fontWeight: .w800, color: Colors.white, fontSize: fontSize),
   );
 
-  static TextStyle titleTextStyle({Color? color}) => AppFonts.nunito(fontWeight: .w800, fontSize: 16, color: color);
+  static TextStyle titleTextStyle({TextStyle? textStyle}) => textStyle ?? const TextStyle(fontWeight: .w800, fontSize: 16);
 
   static Widget loadingWidget({double size = 28, Color? color}) => SizedBox(
     width: size,
