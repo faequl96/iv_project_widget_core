@@ -18,7 +18,7 @@ class GeneralConfirmationDialogButton extends StatelessWidget {
       builder: (_, isBusy) => GeneralEffectsButton(
         onTap: onTap,
         isDisabled: isBusy,
-        width: double.maxFinite,
+        width: .maxFinite,
         padding: const .symmetric(vertical: 12),
         color: isCancel
             ? Colors.white
