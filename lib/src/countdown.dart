@@ -19,7 +19,7 @@ class _CountdownState extends State<Countdown> {
   Timer? _timer;
 
   void _startCountdown() {
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+    _timer = .periodic(const Duration(seconds: 1), (timer) {
       if (_countdown == 1) {
         timer.cancel();
         NavigationService.pop(true);

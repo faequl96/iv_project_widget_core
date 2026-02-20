@@ -50,7 +50,7 @@ class _OnProcessContentState extends State<OnProcessContent> with SingleTickerPr
                   const SizedBox(
                     width: 60,
                     height: 60,
-                    child: CircularProgressIndicator(strokeWidth: 6, strokeCap: StrokeCap.round, color: AppColor.primaryColor),
+                    child: CircularProgressIndicator(strokeWidth: 6, strokeCap: .round, color: AppColor.primaryColor),
                   ),
                   const Icon(Icons.cloud_sync_rounded, size: 32, color: AppColor.primaryColor),
                 ],

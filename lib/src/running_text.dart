@@ -47,8 +47,8 @@ class _RunningTextState extends State<RunningText> with SingleTickerProviderStat
     final painter = TextPainter(
       text: TextSpan(text: widget.text, style: widget.textStyle),
       maxLines: 1,
-      textDirection: TextDirection.ltr,
-      textWidthBasis: TextWidthBasis.longestLine,
+      textDirection: .ltr,
+      textWidthBasis: .longestLine,
     )..layout();
     _textWidth = painter.width + (painter.width * .15);
 
