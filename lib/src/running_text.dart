@@ -5,7 +5,7 @@ class RunningText extends StatefulWidget {
     super.key,
     required this.constraints,
     required this.text,
-    this.textStyle = const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
+    this.textStyle = const TextStyle(fontSize: 16, fontWeight: .bold, color: Colors.white),
   });
 
   final BoxConstraints constraints;
@@ -23,12 +23,12 @@ class _RunningTextState extends State<RunningText> with SingleTickerProviderStat
   double _textWidth = 0;
 
   void _startAnimationLoop() async {
-    await Future.delayed(const Duration(seconds: 1));
+    await Future<void>.delayed(const Duration(seconds: 1));
     while (mounted) {
       await _controller.forward(from: 0);
-      await Future.delayed(const Duration(seconds: 1));
+      await Future<void>.delayed(const Duration(seconds: 1));
       if (mounted) _controller.value = 0;
-      await Future.delayed(const Duration(seconds: 2));
+      await Future<void>.delayed(const Duration(seconds: 2));
     }
   }
 
@@ -71,7 +71,7 @@ class _RunningTextState extends State<RunningText> with SingleTickerProviderStat
         final slide = _animation.value * (widget.constraints.maxWidth) - (_textWidth - widget.constraints.maxWidth);
 
         return Stack(
-          alignment: AlignmentDirectional.center,
+          alignment: .center,
           children: [
             SizedBox(width: _textWidth, height: 24),
             Positioned(

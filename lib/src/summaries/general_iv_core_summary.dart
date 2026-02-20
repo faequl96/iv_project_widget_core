@@ -18,7 +18,7 @@ class GeneralIVCoreSummary<T> extends StatelessWidget {
             const Spacer(),
             Text(
               '$id',
-              style: const TextStyle(fontWeight: FontWeight.bold, color: AppColor.primaryColor),
+              style: const TextStyle(fontWeight: .bold, color: AppColor.primaryColor),
             ),
             const SizedBox(width: 14),
           ],
@@ -30,7 +30,7 @@ class GeneralIVCoreSummary<T> extends StatelessWidget {
             const Spacer(),
             Text(
               name,
-              style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey.shade700),
+              style: TextStyle(fontWeight: .bold, color: Colors.grey.shade700),
             ),
             const SizedBox(width: 14),
           ],

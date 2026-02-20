@@ -45,9 +45,9 @@ class _SkeletonBoxState extends State<SkeletonBox> with SingleTickerProviderStat
         final slide = _controller.value * (widget.width + widget.sliderWidth) - widget.sliderWidth;
 
         return ClipRRect(
-          borderRadius: BorderRadius.circular(widget.borderRadius),
+          borderRadius: .circular(widget.borderRadius),
           child: Stack(
-            alignment: AlignmentDirectional.center,
+            alignment: .center,
             children: [
               SizedBox(
                 width: widget.width,

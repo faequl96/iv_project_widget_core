@@ -32,7 +32,7 @@ class ZoomImagePage extends StatelessWidget {
           leading: GeneralEffectsButton(
             onTap: () => Navigator.pop(context),
             splashColor: ColorConverter.lighten(AppColor.primaryColor),
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: .circular(30),
             child: const Icon(Icons.arrow_back_ios_rounded, size: 28, color: Colors.white),
           ),
         ),
@@ -40,7 +40,7 @@ class ZoomImagePage extends StatelessWidget {
           child: Hero(
             tag: tag,
             flightShuttleBuilder: (_, _, _, _, _) => image,
-            child: InteractiveViewer(clipBehavior: Clip.none, minScale: 1, maxScale: 4, child: image),
+            child: InteractiveViewer(clipBehavior: .none, minScale: 1, maxScale: 4, child: image),
           ),
         ),
       ),

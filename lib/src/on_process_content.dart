@@ -32,20 +32,20 @@ class _OnProcessContentState extends State<OnProcessContent> with SingleTickerPr
     return ColoredBox(
       color: ColorConverter.lighten(AppColor.primaryColor, 92),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 40),
+        padding: const .symmetric(horizontal: 40),
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisSize: .min,
           children: [
             const SizedBox(height: 28),
             ScaleTransition(
               scale: Tween(begin: 0.95, end: 1.05).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut)),
               child: Stack(
-                alignment: Alignment.center,
+                alignment: .center,
                 children: [
                   Container(
                     width: 80,
                     height: 80,
-                    decoration: BoxDecoration(shape: BoxShape.circle, color: AppColor.primaryColor.withValues(alpha: .1)),
+                    decoration: BoxDecoration(shape: .circle, color: AppColor.primaryColor.withValues(alpha: .1)),
                   ),
                   const SizedBox(
                     width: 60,
@@ -59,14 +59,14 @@ class _OnProcessContentState extends State<OnProcessContent> with SingleTickerPr
             const SizedBox(height: 14),
             const Text(
               'Sedang memproses permintaan...',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              textAlign: .center,
+              style: TextStyle(fontSize: 18, fontWeight: .bold),
             ),
             const SizedBox(height: 8),
             if (widget.message != null)
               Text(
                 widget.message!,
-                textAlign: TextAlign.center,
+                textAlign: .center,
                 style: TextStyle(fontSize: 14, color: Colors.grey.shade600, height: 1.5),
               ),
             const SizedBox(height: 32),

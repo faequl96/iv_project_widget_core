@@ -20,7 +20,7 @@ class GeneralDialog {
         action: HeaderAction(actionIcon: Icons.close, onTap: () => NavigationService.pop()),
       ),
       decoration: BottomSheetDecoration(
-        borderRadius: const BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
+        borderRadius: const .only(topLeft: .circular(24), topRight: .circular(24)),
       ),
       wallpapers: ShowModal.builtInWallpapers(),
       contentBuilder: (_) => content,
@@ -42,7 +42,7 @@ class GeneralDialog {
         action: HeaderAction(actionIcon: Icons.close, onTap: () => NavigationService.pop()),
       ),
       decoration: BottomSheetDecoration(
-        borderRadius: const BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
+        borderRadius: const .only(topLeft: .circular(24), topRight: .circular(24)),
       ),
       wallpapers: ShowModal.builtInWallpapers(isError: true),
       contentBuilder: (_) => content,
@@ -57,7 +57,7 @@ class GeneralDialog {
     showSuccess(
       GeneralResponseStateDialogContent.success(
         verticalAxisContents: [
-          Text(message, style: textStyle ?? const TextStyle(fontSize: 15, fontWeight: FontWeight.w800)),
+          Text(message, style: textStyle ?? const TextStyle(fontSize: 15, fontWeight: .w800)),
           const SizedBox(height: 10),
           Countdown(durationInSeconds: 5, message: AppLocalization.translate('transaction.autoCloseIn')),
         ],
@@ -69,7 +69,7 @@ class GeneralDialog {
     showError(
       GeneralResponseStateDialogContent.error(
         verticalAxisContents: [
-          Text(message, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+          Text(message, style: const TextStyle(fontSize: 15, fontWeight: .bold)),
           const SizedBox(height: 10),
           Countdown(durationInSeconds: 5, message: AppLocalization.translate('transaction.autoCloseIn')),
         ],
@@ -84,8 +84,8 @@ class GeneralDialog {
         verticalAxisContents: [
           Text(
             message,
-            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 15, fontWeight: .bold),
+            textAlign: .center,
           ),
           const SizedBox(height: 10),
           Countdown(durationInSeconds: durationInSeconds, message: AppLocalization.translate('transaction.autoCloseIn')),
@@ -101,9 +101,9 @@ class GeneralDialog {
       GlobalContextService.value,
       decoration: BottomSheetDecoration(
         color: ColorConverter.lighten(AppColor.primaryColor, 94),
-        borderRadius: const BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
+        borderRadius: const .only(topLeft: .circular(24), topRight: .circular(24)),
       ),
-      header: const BottomSheetHeader(title: HeaderTitle.handleBar()),
+      header: const BottomSheetHeader(title: .handleBar()),
       contentBuilder: (_) => GeneralConfirmationDialogContent.delete(
         message: Text.rich(
           TextSpan(
@@ -112,12 +112,12 @@ class GeneralDialog {
               const TextSpan(text: ' '),
               TextSpan(
                 text: itemName,
-                style: const TextStyle(fontWeight: FontWeight.bold),
+                style: const TextStyle(fontWeight: .bold),
               ),
             ],
           ),
           style: const TextStyle(fontSize: 15),
-          textAlign: TextAlign.center,
+          textAlign: .center,
         ),
       ),
     ).then((value) {
@@ -136,7 +136,7 @@ class GeneralDialog {
       enableDrag: false,
       decoration: BottomSheetDecoration(
         color: ColorConverter.lighten(AppColor.primaryColor, 94),
-        borderRadius: const BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
+        borderRadius: const .only(topLeft: .circular(24), topRight: .circular(24)),
       ),
       contentBuilder: (_) => OnProcessContent(message: message),
     ).then((_) {

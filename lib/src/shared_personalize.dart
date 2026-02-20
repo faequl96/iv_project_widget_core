@@ -10,10 +10,10 @@ class SharedPersonalize {
   }
 
   static final bottomSheetDecoration = BottomSheetDecoration(
-    borderRadius: const BorderRadius.only(topLeft: Radius.circular(16), topRight: Radius.circular(16)),
+    borderRadius: const .only(topLeft: .circular(16), topRight: .circular(16)),
   );
 
-  static final dialogDecoration = DialogDecoration(borderRadius: BorderRadius.circular(14));
+  static final dialogDecoration = DialogDecoration(borderRadius: .circular(14));
 
   static PreSufFixIcon suffixClear(void Function() onTap, {Color? color, Color? iconColor}) {
     return PreSufFixIcon(
@@ -35,7 +35,7 @@ class SharedPersonalize {
           height: 14,
           child: Text(
             '*',
-            textAlign: TextAlign.center,
+            textAlign: .center,
             style: textStyle ?? TextStyle(fontSize: 22, height: 1, color: ColorConverter.lighten(Colors.red), fontWeight: .w800),
           ),
         ),
@@ -44,7 +44,7 @@ class SharedPersonalize {
   );
 
   static TextFieldValidator fieldCanNotEmpty({String? message, TextStyle? textStyle}) {
-    return TextFieldValidator.failed(
+    return .failed(
       message: Text(
         message ?? AppLocalization.translate('auth.error.validation.cannotBeEmpty'),
         style: textStyle ?? const TextStyle(color: Colors.red),
@@ -53,7 +53,7 @@ class SharedPersonalize {
   }
 
   static TextFieldValidator fieldEmailNotValid({TextStyle? textStyle}) {
-    return TextFieldValidator.failed(
+    return .failed(
       message: Text(
         AppLocalization.translate('auth.error.validation.invalidEmail'),
         style: textStyle ?? const TextStyle(color: Colors.red),
@@ -63,7 +63,7 @@ class SharedPersonalize {
 
   static Text buttonText(String text, {double? fontSize, TextStyle? textStyle}) => Text(
     text,
-    textAlign: TextAlign.center,
+    textAlign: .center,
     style: textStyle ?? TextStyle(fontWeight: .w800, color: Colors.white, fontSize: fontSize),
   );
 

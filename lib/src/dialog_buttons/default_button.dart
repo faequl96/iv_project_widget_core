@@ -12,12 +12,12 @@ class DefaultButton extends StatelessWidget {
     this.isBusy = false,
     this.isLoading = false,
     required this.onTap,
-  }) : margin = EdgeInsets.zero;
+  }) : margin = .zero;
 
   const DefaultButton.dialog({
     super.key,
     required this.title,
-    this.margin = const EdgeInsets.only(top: 14, left: 14, right: 14, bottom: 20),
+    this.margin = const .only(top: 14, left: 14, right: 14, bottom: 20),
     required this.color,
     this.isDisabled = false,
     this.isBusy = false,
@@ -44,15 +44,15 @@ class DefaultButton extends StatelessWidget {
         height: height,
         color: color,
         splashColor: Colors.grey.shade300,
-        borderRadius: BorderRadius.circular(40),
+        borderRadius: .circular(40),
         useInitialElevation: true,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: .center,
           children: [
             if (isLoading) ...[SharedPersonalize.loadingWidget(size: 16, color: Colors.white), const SizedBox(width: 10)],
             Text(
               title,
-              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+              style: const TextStyle(fontSize: 15, fontWeight: .bold, color: Colors.white),
             ),
           ],
         ),

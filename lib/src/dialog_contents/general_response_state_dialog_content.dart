@@ -14,9 +14,9 @@ class GeneralResponseStateDialogContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const .symmetric(horizontal: 20),
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+        mainAxisSize: .min,
         children: [
           if (!isError)
             Icon(Icons.check_circle_rounded, color: iconColor, size: 64)

@@ -47,11 +47,11 @@ class _CountdownState extends State<Countdown> {
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
-      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(30)),
+      decoration: BoxDecoration(color: Colors.white, borderRadius: .circular(30)),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+        padding: const .symmetric(horizontal: 12, vertical: 4),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: .center,
           children: [
             Text(widget.message, style: widget.textStyle ?? const TextStyle(fontWeight: .w400)),
             const SizedBox(width: 6),
