@@ -133,6 +133,7 @@ class GeneralDialog {
     ShowModal.bottomSheet<void>(
       GlobalContextService.value,
       dismissible: false,
+      canPop: false,
       enableDrag: false,
       decoration: BottomSheetDecoration(
         color: ColorConverter.lighten(AppColor.primaryColor, 94),
