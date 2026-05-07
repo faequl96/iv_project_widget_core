@@ -5,7 +5,7 @@ class RunningText extends StatefulWidget {
     super.key,
     required this.constraints,
     required this.text,
-    this.textStyle = const TextStyle(fontSize: 16, fontWeight: .bold, color: Colors.white),
+    this.textStyle = const TextStyle(fontSize: 16, fontWeight: .w600, color: Colors.white),
   });
 
   final BoxConstraints constraints;

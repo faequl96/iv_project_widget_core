@@ -52,7 +52,7 @@ class DefaultButton extends StatelessWidget {
             if (isLoading) ...[SharedPersonalize.loadingWidget(size: 16, color: Colors.white), const SizedBox(width: 10)],
             Text(
               title,
-              style: const TextStyle(fontSize: 15, fontWeight: .bold, color: Colors.white),
+              style: const TextStyle(fontSize: 15, fontWeight: .w600, color: Colors.white),
             ),
           ],
         ),

@@ -60,7 +60,7 @@ class _OnProcessContentState extends State<OnProcessContent> with SingleTickerPr
             const Text(
               'Sedang memproses permintaan...',
               textAlign: .center,
-              style: TextStyle(fontSize: 18, fontWeight: .bold),
+              style: TextStyle(fontSize: 18, fontWeight: .w600),
             ),
             const SizedBox(height: 8),
             if (widget.message != null)
