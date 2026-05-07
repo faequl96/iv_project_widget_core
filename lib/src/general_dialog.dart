@@ -69,7 +69,7 @@ class GeneralDialog {
     showError(
       GeneralResponseStateDialogContent.error(
         verticalAxisContents: [
-          Text(message, style: const TextStyle(fontSize: 15, fontWeight: .bold)),
+          Text(message, style: const TextStyle(fontSize: 15, fontWeight: .w600)),
           const SizedBox(height: 10),
           Countdown(durationInSeconds: 5, message: AppLocalization.translate('transaction.autoCloseIn')),
         ],
@@ -84,7 +84,7 @@ class GeneralDialog {
         verticalAxisContents: [
           Text(
             message,
-            style: const TextStyle(fontSize: 15, fontWeight: .bold),
+            style: const TextStyle(fontSize: 15, fontWeight: .w600),
             textAlign: .center,
           ),
           const SizedBox(height: 10),
@@ -112,7 +112,7 @@ class GeneralDialog {
               const TextSpan(text: ' '),
               TextSpan(
                 text: itemName,
-                style: const TextStyle(fontWeight: .bold),
+                style: const TextStyle(fontWeight: .w600),
               ),
             ],
           ),
