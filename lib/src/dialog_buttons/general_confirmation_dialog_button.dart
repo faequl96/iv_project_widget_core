@@ -15,30 +15,30 @@ class GeneralConfirmationDialogButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<BusyCubit, bool>(
-      builder: (_, isBusy) => GeneralEffectsButton(
+      builder: (_, isBusy) => QuickButton(
         onTap: onTap,
-        isDisabled: isBusy,
-        width: .maxFinite,
-        padding: const .symmetric(vertical: 12),
-        color: isCancel
-            ? Colors.white
-            : isEdit
-            ? ColorConverter.lighten(Colors.blue)
-            : ColorConverter.lighten(Colors.red),
-        borderRadius: .circular(10),
-        border: isCancel
-            ? .all(width: 2, color: isEdit ? ColorConverter.lighten(Colors.blue) : ColorConverter.lighten(Colors.red))
-            : null,
-        useInitialElevation: true,
-        hoveredElevation: 3,
+        disabled: isBusy,
+        style: QuickButtonStyle(
+          width: .maxFinite,
+          padding: const .symmetric(vertical: 12),
+          color: isCancel
+              ? Colors.white
+              : isEdit
+              ? ColorUtil.lighten(Colors.blue)
+              : ColorUtil.lighten(Colors.red),
+          borderRadius: .circular(10),
+          border: isCancel
+              ? .all(width: 2, color: isEdit ? ColorUtil.lighten(Colors.blue) : ColorUtil.lighten(Colors.red))
+              : null,
+        ),
         child: SharedPersonalize.buttonText(
           isCancel ? AppLocalization.translate('common.cancel') : AppLocalization.translate('common.confirm'),
           fontSize: 15,
           textStyle: TextStyle(
             color: isCancel
                 ? isEdit
-                      ? ColorConverter.lighten(Colors.blue)
-                      : ColorConverter.lighten(Colors.red)
+                      ? ColorUtil.lighten(Colors.blue)
+                      : ColorUtil.lighten(Colors.red)
                 : null,
           ),
         ),

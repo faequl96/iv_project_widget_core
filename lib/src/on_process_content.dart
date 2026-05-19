@@ -30,7 +30,7 @@ class _OnProcessContentState extends State<OnProcessContent> with SingleTickerPr
   @override
   Widget build(BuildContext context) {
     return ColoredBox(
-      color: ColorConverter.lighten(AppColor.primaryColor, 92),
+      color: ColorUtil.lighten(AppColor.primaryColor, 92),
       child: Padding(
         padding: const .symmetric(horizontal: 40),
         child: Column(

@@ -36,7 +36,7 @@ class SharedPersonalize {
           child: Text(
             '*',
             textAlign: .center,
-            style: textStyle ?? TextStyle(fontSize: 22, height: 1, color: ColorConverter.lighten(Colors.red), fontWeight: .w800),
+            style: textStyle ?? TextStyle(fontSize: 22, height: 1, color: ColorUtil.lighten(Colors.red), fontWeight: .w800),
           ),
         ),
       ),

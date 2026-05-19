@@ -38,14 +38,10 @@ class DefaultButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: margin,
-      child: GeneralEffectsButton(
+      child: QuickButton(
         onTap: onTap,
-        isDisabled: isBusy || isDisabled,
-        height: height,
-        color: color,
-        splashColor: Colors.grey.shade300,
-        borderRadius: .circular(40),
-        useInitialElevation: true,
+        disabled: isBusy || isDisabled,
+        style: QuickButtonStyle(height: height, color: color, splashColor: Colors.grey.shade300, borderRadius: .circular(40)),
         child: Row(
           mainAxisAlignment: .center,
           children: [

@@ -22,14 +22,15 @@ class RetryWidget extends StatelessWidget {
           style: textStyle ?? const TextStyle(fontSize: 16, fontWeight: .w800, color: Colors.orange),
         ),
         const SizedBox(height: 10),
-        GeneralEffectsButton(
+        QuickButton(
           onTap: onRetry,
-          height: 44,
-          width: 132,
-          borderRadius: .circular(30),
-          color: AppColor.primaryColor,
-          splashColor: Colors.white,
-          useInitialElevation: true,
+          style: QuickButtonStyle(
+            height: 44,
+            width: 132,
+            borderRadius: .circular(30),
+            color: AppColor.primaryColor,
+            splashColor: Colors.white,
+          ),
           child: Row(
             mainAxisAlignment: .center,
             children: [
