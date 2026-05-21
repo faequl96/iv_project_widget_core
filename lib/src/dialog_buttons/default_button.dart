@@ -41,11 +41,14 @@ class DefaultButton extends StatelessWidget {
       child: QuickButton(
         onTap: onTap,
         disabled: isBusy || isDisabled,
-        style: QuickButtonStyle(height: height, color: color, splashColor: Colors.grey.shade300, borderRadius: .circular(40)),
+        style: QuickButtonStyle(height: height, color: color, borderRadius: .circular(40)),
         child: Row(
           mainAxisAlignment: .center,
           children: [
-            if (isLoading) ...[SharedPersonalize.loadingWidget(size: 16, color: Colors.white), const SizedBox(width: 10)],
+            if (isLoading) ...[
+              SharedPersonalize.loadingWidget(size: 16, color: Colors.white),
+              const SizedBox(width: 10),
+            ],
             Text(
               title,
               style: const TextStyle(fontSize: 15, fontWeight: .w600, color: Colors.white),

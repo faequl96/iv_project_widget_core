@@ -3,7 +3,9 @@ import 'package:iv_project_core/iv_project_core.dart';
 import 'package:iv_project_widget_core/iv_project_widget_core.dart';
 
 class GeneralConfirmationDialogContent extends StatelessWidget {
-  const GeneralConfirmationDialogContent.delete({super.key, required this.message}) : isEdit = false;
+  const GeneralConfirmationDialogContent.delete({super.key, required this.message})
+    : isEdit = false;
+
   const GeneralConfirmationDialogContent.edit({super.key, required this.message}) : isEdit = true;
 
   final bool isEdit;
@@ -23,17 +25,33 @@ class GeneralConfirmationDialogContent extends StatelessWidget {
             mainAxisAlignment: .center,
             children: [
               if (isEdit)
-                Expanded(child: GeneralConfirmationDialogButton.edit(isCancel: true, onTap: () => NavigationService.pop(false)))
+                Expanded(
+                  child: GeneralConfirmationDialogButton.edit(
+                    isCancel: true,
+                    onTap: () => NavigationService.pop(false),
+                  ),
+                )
               else
                 Expanded(
-                  child: GeneralConfirmationDialogButton.delete(isCancel: true, onTap: () => NavigationService.pop(false)),
+                  child: GeneralConfirmationDialogButton.delete(
+                    isCancel: true,
+                    onTap: () => NavigationService.pop(false),
+                  ),
                 ),
               const SizedBox(width: 10),
               if (isEdit)
-                Expanded(child: GeneralConfirmationDialogButton.edit(isCancel: false, onTap: () => NavigationService.pop(true)))
+                Expanded(
+                  child: GeneralConfirmationDialogButton.edit(
+                    isCancel: false,
+                    onTap: () => NavigationService.pop(true),
+                  ),
+                )
               else
                 Expanded(
-                  child: GeneralConfirmationDialogButton.delete(isCancel: false, onTap: () => NavigationService.pop(true)),
+                  child: GeneralConfirmationDialogButton.delete(
+                    isCancel: false,
+                    onTap: () => NavigationService.pop(true),
+                  ),
                 ),
             ],
           ),

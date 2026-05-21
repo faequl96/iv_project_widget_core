@@ -31,7 +31,10 @@ class ZoomImagePage extends StatelessWidget {
           backgroundColor: Colors.transparent,
           leading: QuickButton(
             onTap: () => Navigator.pop(context),
-            style: QuickButtonStyle(splashColor: ColorUtil.lighten(AppColor.primaryColor), borderRadius: .circular(30)),
+            style: QuickButtonStyle(
+              splashColor: ColorUtil.lighten(AppColor.primaryColor),
+              borderRadius: .circular(30),
+            ),
             child: const Icon(Icons.arrow_back_ios_rounded, size: 28, color: Colors.white),
           ),
         ),

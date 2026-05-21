@@ -5,8 +5,17 @@ import 'package:iv_project_widget_core/iv_project_widget_core.dart';
 import 'package:quick_dev_sdk/quick_dev_sdk.dart';
 
 class GeneralConfirmationDialogButton extends StatelessWidget {
-  const GeneralConfirmationDialogButton.delete({super.key, required this.isCancel, required this.onTap}) : isEdit = false;
-  const GeneralConfirmationDialogButton.edit({super.key, required this.isCancel, required this.onTap}) : isEdit = true;
+  const GeneralConfirmationDialogButton.delete({
+    super.key,
+    required this.isCancel,
+    required this.onTap,
+  }) : isEdit = false;
+
+  const GeneralConfirmationDialogButton.edit({
+    super.key,
+    required this.isCancel,
+    required this.onTap,
+  }) : isEdit = true;
 
   final bool isEdit;
   final bool isCancel;
@@ -28,11 +37,16 @@ class GeneralConfirmationDialogButton extends StatelessWidget {
               : ColorUtil.lighten(Colors.red),
           borderRadius: .circular(10),
           border: isCancel
-              ? .all(width: 2, color: isEdit ? ColorUtil.lighten(Colors.blue) : ColorUtil.lighten(Colors.red))
+              ? .all(
+                  width: 2,
+                  color: isEdit ? ColorUtil.lighten(Colors.blue) : ColorUtil.lighten(Colors.red),
+                )
               : null,
         ),
         child: SharedPersonalize.buttonText(
-          isCancel ? AppLocalization.translate('common.cancel') : AppLocalization.translate('common.confirm'),
+          isCancel
+              ? AppLocalization.translate('common.cancel')
+              : AppLocalization.translate('common.confirm'),
           fontSize: 15,
           textStyle: TextStyle(
             color: isCancel

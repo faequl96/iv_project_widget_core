@@ -59,7 +59,10 @@ class GeneralDialog {
         verticalAxisContents: [
           Text(message, style: textStyle ?? const TextStyle(fontSize: 15, fontWeight: .w800)),
           const SizedBox(height: 10),
-          Countdown(durationInSeconds: 5, message: AppLocalization.translate('transaction.autoCloseIn')),
+          Countdown(
+            durationInSeconds: 5,
+            message: AppLocalization.translate('transaction.autoCloseIn'),
+          ),
         ],
       ),
     );
@@ -71,7 +74,10 @@ class GeneralDialog {
         verticalAxisContents: [
           Text(message, style: const TextStyle(fontSize: 15, fontWeight: .w600)),
           const SizedBox(height: 10),
-          Countdown(durationInSeconds: 5, message: AppLocalization.translate('transaction.autoCloseIn')),
+          Countdown(
+            durationInSeconds: 5,
+            message: AppLocalization.translate('transaction.autoCloseIn'),
+          ),
         ],
       ),
     );
@@ -88,7 +94,10 @@ class GeneralDialog {
             textAlign: .center,
           ),
           const SizedBox(height: 10),
-          Countdown(durationInSeconds: durationInSeconds, message: AppLocalization.translate('transaction.autoCloseIn')),
+          Countdown(
+            durationInSeconds: durationInSeconds,
+            message: AppLocalization.translate('transaction.autoCloseIn'),
+          ),
         ],
       ),
     );
