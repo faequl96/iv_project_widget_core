@@ -4,7 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:iv_project_core/iv_project_core.dart';
 
 class Countdown extends StatefulWidget {
-  const Countdown({super.key, required this.durationInSeconds, required this.message, this.textStyle});
+  const Countdown({
+    super.key,
+    required this.durationInSeconds,
+    required this.message,
+    this.textStyle,
+  });
 
   final int durationInSeconds;
   final String message;
@@ -60,7 +65,9 @@ class _CountdownState extends State<Countdown> {
               child: Text(
                 '$_countdown',
                 key: ValueKey<int>(_countdown),
-                style: widget.textStyle ?? const TextStyle(fontSize: 16, fontWeight: .w800, color: AppColor.primaryColor),
+                style:
+                    widget.textStyle ??
+                    const TextStyle(fontSize: 16, fontWeight: .w800, color: AppColor.primaryColor),
               ),
             ),
             const SizedBox(width: 6),

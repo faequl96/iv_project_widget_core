@@ -12,7 +12,7 @@ class GeneralDialog {
   static Future<T> showSuccess<T>(Widget content) async {
     final completer = Completer<T>();
 
-    ShowModal.bottomSheet<T>(
+    FloatingOverlay.showBottomSheet<T>(
       GlobalContextService.value,
       dismissible: false,
       enableDrag: false,
@@ -22,7 +22,7 @@ class GeneralDialog {
       decoration: BottomSheetDecoration(
         borderRadius: const .only(topLeft: .circular(24), topRight: .circular(24)),
       ),
-      wallpapers: ShowModal.builtInWallpapers(),
+      wallpapers: FloatingOverlay.builtInWallpapers(),
       contentBuilder: (_) => content,
     ).then((value) {
       completer.complete(value);
@@ -34,7 +34,7 @@ class GeneralDialog {
   static Future<T> showError<T>(Widget content) async {
     final completer = Completer<T>();
 
-    ShowModal.bottomSheet<T>(
+    FloatingOverlay.showBottomSheet<T>(
       GlobalContextService.value,
       dismissible: false,
       enableDrag: false,
@@ -44,7 +44,7 @@ class GeneralDialog {
       decoration: BottomSheetDecoration(
         borderRadius: const .only(topLeft: .circular(24), topRight: .circular(24)),
       ),
-      wallpapers: ShowModal.builtInWallpapers(isError: true),
+      wallpapers: FloatingOverlay.builtInWallpapers(isError: true),
       contentBuilder: (_) => content,
     ).then((value) {
       completer.complete(value);
@@ -59,7 +59,10 @@ class GeneralDialog {
         verticalAxisContents: [
           Text(message, style: textStyle ?? const TextStyle(fontSize: 15, fontWeight: .w800)),
           const SizedBox(height: 10),
-          Countdown(durationInSeconds: 5, message: AppLocalization.translate('transaction.autoCloseIn')),
+          Countdown(
+            durationInSeconds: 5,
+            message: AppLocalization.translate('transaction.autoCloseIn'),
+          ),
         ],
       ),
     );
@@ -71,7 +74,10 @@ class GeneralDialog {
         verticalAxisContents: [
           Text(message, style: const TextStyle(fontSize: 15, fontWeight: .w600)),
           const SizedBox(height: 10),
-          Countdown(durationInSeconds: 5, message: AppLocalization.translate('transaction.autoCloseIn')),
+          Countdown(
+            durationInSeconds: 5,
+            message: AppLocalization.translate('transaction.autoCloseIn'),
+          ),
         ],
       ),
     );
@@ -88,7 +94,10 @@ class GeneralDialog {
             textAlign: .center,
           ),
           const SizedBox(height: 10),
-          Countdown(durationInSeconds: durationInSeconds, message: AppLocalization.translate('transaction.autoCloseIn')),
+          Countdown(
+            durationInSeconds: durationInSeconds,
+            message: AppLocalization.translate('transaction.autoCloseIn'),
+          ),
         ],
       ),
     );
@@ -97,10 +106,10 @@ class GeneralDialog {
   static Future<bool?> showDeleteConfirmation(String itemName) async {
     final completer = Completer<bool?>();
 
-    ShowModal.bottomSheet<bool?>(
+    FloatingOverlay.showBottomSheet<bool?>(
       GlobalContextService.value,
       decoration: BottomSheetDecoration(
-        color: ColorConverter.lighten(AppColor.primaryColor, 94),
+        color: ColorUtil.lighten(AppColor.primaryColor, 94),
         borderRadius: const .only(topLeft: .circular(24), topRight: .circular(24)),
       ),
       header: const BottomSheetHeader(title: .handleBar()),
@@ -130,13 +139,13 @@ class GeneralDialog {
   static Future<void> showOnProcess({String? message}) async {
     final completer = Completer<void>();
 
-    ShowModal.bottomSheet<void>(
+    FloatingOverlay.showBottomSheet<void>(
       GlobalContextService.value,
       dismissible: false,
       canPop: false,
       enableDrag: false,
       decoration: BottomSheetDecoration(
-        color: ColorConverter.lighten(AppColor.primaryColor, 94),
+        color: ColorUtil.lighten(AppColor.primaryColor, 94),
         borderRadius: const .only(topLeft: .circular(24), topRight: .circular(24)),
       ),
       contentBuilder: (_) => OnProcessContent(message: message),

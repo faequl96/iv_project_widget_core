@@ -19,17 +19,19 @@ class RetryWidget extends StatelessWidget {
       children: [
         Text(
           errorMessage,
-          style: textStyle ?? const TextStyle(fontSize: 16, fontWeight: .w800, color: Colors.orange),
+          style:
+              textStyle ?? const TextStyle(fontSize: 16, fontWeight: .w800, color: Colors.orange),
         ),
         const SizedBox(height: 10),
-        GeneralEffectsButton(
+        QuickButton(
           onTap: onRetry,
-          height: 44,
-          width: 132,
-          borderRadius: .circular(30),
-          color: AppColor.primaryColor,
-          splashColor: Colors.white,
-          useInitialElevation: true,
+          style: QuickButtonStyle(
+            height: 44,
+            width: 132,
+            borderRadius: .circular(30),
+            color: AppColor.primaryColor,
+            splashColor: Colors.white,
+          ),
           child: Row(
             mainAxisAlignment: .center,
             children: [
@@ -37,7 +39,9 @@ class RetryWidget extends StatelessWidget {
               const SizedBox(width: 6),
               Text(
                 localeCubit.state.languageCode == 'id' ? 'Coba Lagi' : 'Try Again',
-                style: textStyle ?? const TextStyle(fontSize: 15, fontWeight: .w700, color: Colors.white),
+                style:
+                    textStyle ??
+                    const TextStyle(fontSize: 15, fontWeight: .w700, color: Colors.white),
               ),
               const SizedBox(width: 4),
             ],

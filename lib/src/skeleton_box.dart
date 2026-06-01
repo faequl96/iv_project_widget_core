@@ -27,7 +27,8 @@ class _SkeletonBoxState extends State<SkeletonBox> with SingleTickerProviderStat
   void initState() {
     super.initState();
 
-    _controller = AnimationController(duration: const Duration(milliseconds: 1200), vsync: this)..repeat();
+    _controller = AnimationController(duration: const Duration(milliseconds: 1200), vsync: this)
+      ..repeat();
   }
 
   @override

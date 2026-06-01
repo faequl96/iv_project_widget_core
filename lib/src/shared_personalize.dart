@@ -6,7 +6,11 @@ class SharedPersonalize {
   SharedPersonalize._();
 
   static HeaderAction headerActionClose(BuildContext context) {
-    return HeaderAction(actionIcon: Icons.close, onHoverIconColor: Colors.red, onTap: () => Navigator.pop(context));
+    return HeaderAction(
+      actionIcon: Icons.close,
+      onHoverIconColor: Colors.red,
+      onTap: () => Navigator.pop(context),
+    );
   }
 
   static final bottomSheetDecoration = BottomSheetDecoration(
@@ -36,7 +40,14 @@ class SharedPersonalize {
           child: Text(
             '*',
             textAlign: .center,
-            style: textStyle ?? TextStyle(fontSize: 22, height: 1, color: ColorConverter.lighten(Colors.red), fontWeight: .w800),
+            style:
+                textStyle ??
+                TextStyle(
+                  fontSize: 22,
+                  height: 1,
+                  color: ColorUtil.lighten(Colors.red),
+                  fontWeight: .w800,
+                ),
           ),
         ),
       ),
@@ -67,11 +78,15 @@ class SharedPersonalize {
     style: textStyle ?? TextStyle(fontWeight: .w800, color: Colors.white, fontSize: fontSize),
   );
 
-  static TextStyle titleTextStyle({TextStyle? textStyle}) => textStyle ?? const TextStyle(fontWeight: .w800, fontSize: 16);
+  static TextStyle titleTextStyle({TextStyle? textStyle}) =>
+      textStyle ?? const TextStyle(fontWeight: .w800, fontSize: 16);
 
   static Widget loadingWidget({double size = 28, Color? color}) => SizedBox(
     width: size,
     height: size,
-    child: CircularProgressIndicator(strokeWidth: size / 5.2, color: color ?? Theme.of(GlobalContextService.value).primaryColor),
+    child: CircularProgressIndicator(
+      strokeWidth: size / 5.2,
+      color: color ?? Theme.of(GlobalContextService.value).primaryColor,
+    ),
   );
 }
