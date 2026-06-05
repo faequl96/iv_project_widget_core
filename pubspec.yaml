@@ -1,6 +1,6 @@
 name: iv_project_widget_core
 description: "A new Flutter package project."
-version: 0.0.8
+version: 0.0.9
 homepage:
 publish_to: none
 
@@ -19,7 +19,7 @@ dependencies:
   quick_dev_sdk:
     git:
       url: https://github.com/faequl96/quick_dev_sdk.git
-      ref: 0.4.0
+      ref: 0.5.0
 
   bloc: ^9.2.1
   flutter_bloc: ^9.1.1
