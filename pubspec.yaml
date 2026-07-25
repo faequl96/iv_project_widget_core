@@ -1,6 +1,6 @@
 name: iv_project_widget_core
 description: "A new Flutter package project."
-version: 0.1.0
+version: 0.1.1
 homepage:
 publish_to: none
 
@@ -14,12 +14,12 @@ dependencies:
   iv_project_core:
     git:
       url: https://github.com/faequl96/iv_project_core.git
-      ref: 0.1.6
+      ref: 0.1.7
 
   quick_dev_sdk:
     git:
       url: https://github.com/faequl96/quick_dev_sdk.git
-      ref: 0.5.0
+      ref: 0.5.1
 
   bloc: ^9.2.1
   flutter_bloc: ^9.1.1
