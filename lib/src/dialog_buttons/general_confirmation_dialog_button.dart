@@ -28,7 +28,7 @@ class GeneralConfirmationDialogButton extends StatelessWidget {
         onTap: onTap,
         disabled: isBusy,
         style: QuickButtonStyle(
-          width: .maxFinite,
+          width: .infinity,
           padding: const .symmetric(vertical: 12),
           color: isCancel
               ? Colors.white
