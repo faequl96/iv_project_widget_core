@@ -3,23 +3,17 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:iv_project_core/iv_project_core.dart';
 
-class Countdown extends StatefulWidget {
-  const Countdown({
-    super.key,
-    required this.durationInSeconds,
-    required this.message,
-    this.textStyle,
-  });
-
-  final int durationInSeconds;
-  final String message;
-  final TextStyle? textStyle;
-
+class const Countdown({
+  super.key,
+  required final int durationInSeconds,
+  required final String message,
+  final TextStyle? textStyle,
+}) extends StatefulWidget {
   @override
   State<Countdown> createState() => _CountdownState();
 }
 
-class _CountdownState extends State<Countdown> {
+class _CountdownState() extends State<Countdown> {
   late int _countdown;
   Timer? _timer;
 

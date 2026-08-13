@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:iv_project_core/iv_project_core.dart';
 import 'package:quick_dev_sdk/quick_dev_sdk.dart';
 
-class ZoomImageRoute extends PageRouteBuilder {
-  ZoomImageRoute({required this.page})
+class ZoomImageRoute({required final Widget page}) extends PageRouteBuilder {
+  this
     : super(
         pageBuilder: (context, animation, secondaryAnimation) => page,
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
@@ -11,16 +11,10 @@ class ZoomImageRoute extends PageRouteBuilder {
         },
         transitionDuration: const Duration(milliseconds: 400),
       );
-
-  final Widget page;
 }
 
-class ZoomImagePage extends StatelessWidget {
-  const ZoomImagePage({super.key, required this.image, required this.tag});
-
-  final Widget image;
-  final String tag;
-
+class const ZoomImagePage({super.key, required final Widget image, required final String tag})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

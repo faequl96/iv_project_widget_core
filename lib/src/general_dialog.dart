@@ -6,9 +6,7 @@ import 'package:iv_project_widget_core/iv_project_widget_core.dart';
 import 'package:iv_project_widget_core/src/on_process_content.dart';
 import 'package:quick_dev_sdk/quick_dev_sdk.dart';
 
-class GeneralDialog {
-  GeneralDialog._();
-
+class GeneralDialog._() {
   static Future<T> showSuccess<T>(Widget content) async {
     final completer = Completer<T>();
 

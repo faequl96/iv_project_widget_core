@@ -5,17 +5,9 @@ import 'package:iv_project_widget_core/iv_project_widget_core.dart';
 import 'package:quick_dev_sdk/quick_dev_sdk.dart';
 
 class GeneralConfirmationDialogButton extends StatelessWidget {
-  const GeneralConfirmationDialogButton.delete({
-    super.key,
-    required this.isCancel,
-    required this.onTap,
-  }) : isEdit = false;
+  const new delete({super.key, required this.isCancel, required this.onTap}) : isEdit = false;
 
-  const GeneralConfirmationDialogButton.edit({
-    super.key,
-    required this.isCancel,
-    required this.onTap,
-  }) : isEdit = true;
+  const new edit({super.key, required this.isCancel, required this.onTap}) : isEdit = true;
 
   final bool isEdit;
   final bool isCancel;

@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iv_project_core/iv_project_core.dart';
 import 'package:quick_dev_sdk/quick_dev_sdk.dart';
 
-class SharedPersonalize {
-  SharedPersonalize._();
-
+class SharedPersonalize._() {
   static HeaderAction headerActionClose(BuildContext context) {
     return HeaderAction(
       actionIcon: Icons.close,
