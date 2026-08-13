@@ -3,13 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iv_project_core/iv_project_core.dart';
 import 'package:quick_dev_sdk/quick_dev_sdk.dart';
 
-class RetryWidget extends StatelessWidget {
-  const RetryWidget({super.key, required this.errorMessage, required this.onRetry, this.textStyle});
-
-  final String errorMessage;
-  final void Function() onRetry;
-  final TextStyle? textStyle;
-
+class const RetryWidget({
+  super.key,
+  required final String errorMessage,
+  required final void Function() onRetry,
+  final TextStyle? textStyle,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localeCubit = context.read<LocaleCubit>();

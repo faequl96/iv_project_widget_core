@@ -3,10 +3,9 @@ import 'package:iv_project_core/iv_project_core.dart';
 import 'package:iv_project_widget_core/iv_project_widget_core.dart';
 
 class GeneralConfirmationDialogContent extends StatelessWidget {
-  const GeneralConfirmationDialogContent.delete({super.key, required this.message})
-    : isEdit = false;
+  const new delete({super.key, required this.message}) : isEdit = false;
 
-  const GeneralConfirmationDialogContent.edit({super.key, required this.message}) : isEdit = true;
+  const new edit({super.key, required this.message}) : isEdit = true;
 
   final bool isEdit;
   final Widget message;

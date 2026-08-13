@@ -3,7 +3,7 @@ import 'package:iv_project_widget_core/iv_project_widget_core.dart';
 import 'package:quick_dev_sdk/quick_dev_sdk.dart';
 
 class DefaultButton extends StatelessWidget {
-  const DefaultButton({
+  const new({
     super.key,
     required this.title,
     this.height = 52,
@@ -14,7 +14,7 @@ class DefaultButton extends StatelessWidget {
     required this.onTap,
   }) : margin = .zero;
 
-  const DefaultButton.dialog({
+  const new dialog({
     super.key,
     required this.title,
     this.margin = const .only(top: 14, left: 14, right: 14, bottom: 20),

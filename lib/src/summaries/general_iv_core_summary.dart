@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iv_project_core/iv_project_core.dart';
 
-class GeneralIVCoreSummary<T> extends StatelessWidget {
-  const GeneralIVCoreSummary({super.key, required this.id, required this.name});
-
-  final T id;
-  final String name;
-
+class const GeneralIVCoreSummary<T>({super.key, required final T id, required final String name})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

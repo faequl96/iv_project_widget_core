@@ -2,16 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:iv_project_core/iv_project_core.dart';
 import 'package:quick_dev_sdk/quick_dev_sdk.dart';
 
-class OnProcessContent extends StatefulWidget {
-  const OnProcessContent({super.key, this.message});
-
-  final String? message;
-
+class const OnProcessContent({super.key, final String? message}) extends StatefulWidget {
   @override
   State<OnProcessContent> createState() => _OnProcessContentState();
 }
 
-class _OnProcessContentState extends State<OnProcessContent> with SingleTickerProviderStateMixin {
+class _OnProcessContentState() extends State<OnProcessContent> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
   @override

@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
 class GeneralResponseStateDialogContent extends StatelessWidget {
-  const GeneralResponseStateDialogContent.success({super.key, required this.verticalAxisContents})
+  const new success({super.key, required this.verticalAxisContents})
     : isError = false,
       iconColor = Colors.green;
 
-  const GeneralResponseStateDialogContent.error({
-    super.key,
-    this.iconColor = Colors.red,
-    required this.verticalAxisContents,
-  }) : isError = true;
+  const new error({super.key, this.iconColor = Colors.red, required this.verticalAxisContents})
+    : isError = true;
 
   final bool isError;
   final Color iconColor;

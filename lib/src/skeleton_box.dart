@@ -1,26 +1,18 @@
 import 'package:flutter/material.dart';
 
-class SkeletonBox extends StatefulWidget {
-  const SkeletonBox({
-    super.key,
-    required this.width,
-    required this.height,
-    this.borderRadius = 6,
-    this.enableSlider = true,
-    this.sliderWidth = 60,
-  });
-
-  final double width;
-  final double height;
-  final double borderRadius;
-  final bool enableSlider;
-  final double sliderWidth;
-
+class const SkeletonBox({
+  super.key,
+  required final double width,
+  required final double height,
+  final double borderRadius = 6,
+  final bool enableSlider = true,
+  final double sliderWidth = 60,
+}) extends StatefulWidget {
   @override
   State<SkeletonBox> createState() => _SkeletonBoxState();
 }
 
-class _SkeletonBoxState extends State<SkeletonBox> with SingleTickerProviderStateMixin {
+class _SkeletonBoxState() extends State<SkeletonBox> with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
 
   @override
