@@ -1,11 +1,11 @@
 name: iv_project_widget_core
 description: "A new Flutter package project."
-version: 0.1.4
+version: 0.1.5
 homepage:
 publish_to: none
 
 environment:
-  sdk: ^3.13.5
+  sdk: ^3.13.7
 
 dependencies:
   flutter:
