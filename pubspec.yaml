@@ -14,12 +14,12 @@ dependencies:
   iv_project_core:
     git:
       url: https://github.com/faequl96/iv_project_core.git
-      ref: 0.1.9
+      ref: 0.2.0
 
   quick_dev_sdk:
     git:
       url: https://github.com/faequl96/quick_dev_sdk.git
-      ref: 0.5.4
+      ref: 0.5.5
 
   bloc: ^9.2.1
   flutter_bloc: ^9.1.1
